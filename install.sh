@@ -10,4 +10,6 @@ ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
 
 # tmux
-ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+if [ `uname` == 'Darwin' ]; then
+  ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
+fi
