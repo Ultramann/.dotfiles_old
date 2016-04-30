@@ -1,0 +1,12 @@
+[user]
+	name = Ultramann
+	email = cary.goltermann@gmail.com
+	username = Ultramann
+[core]
+	editor = vim
+[alias]
+    hist = log --pretty=format:'%h %ad | %s%d' --graph --date=short
+[push]
+	default = simple
+[credential]
+	helper = osxkeychain
