@@ -2,7 +2,7 @@ call pathogen#infect()
 call pathogen#helptags()
 "Since pathogen is installed - see installation part of:
     "http://mirnazim.org/writings/vim-plugins-i-use/
-"All I need to do to install a vim plugin is use the command (while in .vim)
+"All I need to do to install a vim plugin is use the command (while in .dotfiles/vim)
     "git submodule add (the github url of the vim plugin) bundle/[repo_name]
         "ex: git submodule add git://github.com/tpope/vim-fugitive.git bundle/fugitive
     "git submodule init && git submodule update
@@ -32,8 +32,8 @@ filetype on
 syntax on
 
 "Filetype Specific Settings
-autocmd FileType python,text,markdown setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType haskell setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType python,text,markdown,sh setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType haskell,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "Color settings
 hi NonText      ctermfg=31
