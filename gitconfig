@@ -5,7 +5,8 @@
 [core]
 	editor = vim
 [alias]
-    hist = log --pretty=format:'%h %ad | %s%d' --graph --date=short
+    lg = log --graph --oneline --decorate --topo-order --date=short \
+             --pretty=format:'%h %ad | %s %d'
 [push]
 	default = simple
 [credential]
