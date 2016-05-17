@@ -138,6 +138,11 @@ hi DiffChange   ctermbg=none
     nnoremap <leader>gd :Gdiff<CR>
     nnoremap <leader>gp :Git push<CR>
 
+    "NERDTree
+    nnoremap <leader>n :NERDTreeToggle<CR>
+    let g:NERDTreeDirArrowExpandable = '▸'
+    let g:NERDTreeDirArrowCollapsible = '▾'
+
     "Clipboard
     nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
     vnoremap <leader>y "+y

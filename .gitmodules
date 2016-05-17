@@ -13,3 +13,6 @@
 [submodule "vim/bundle/haskell_syntax"]
 	path = vim/bundle/haskell_syntax
 	url = https://github.com/urso/haskell_syntax.vim.git
+[submodule "vim/bundle/nerdtree"]
+	path = vim/bundle/nerdtree
+	url = https://github.com/scrooloose/nerdtree
