@@ -8,6 +8,7 @@ ln -s ${BASEDIR}/gitconfig ~/.gitconfig
 # vim
 ln -s ${BASEDIR}/vimrc ~/.vimrc
 ln -s ${BASEDIR}/vim/ ~/.vim
+git submodule init && git submodule update
 
 # tmux
 if [ `uname` == 'Darwin' ]; then
