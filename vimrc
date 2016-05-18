@@ -32,8 +32,8 @@ filetype on
 syntax on
 
 "Filetype Specific Settings
-autocmd FileType python,text,markdown,sh setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType haskell,yaml setlocal tabstop=2 shiftwidth=2 softtabstop=2
+autocmd FileType python,text,markdown setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType haskell,yaml,sh setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "Color settings
 hi NonText      ctermfg=31
