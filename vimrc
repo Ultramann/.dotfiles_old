@@ -62,6 +62,7 @@ hi StatusLineNC ctermfg=31 ctermbg=195
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
 hi Search       ctermfg=195 ctermbg=91
 hi Visual       ctermbg=195
+hi VertSplit    term=reverse ctermfg=75
 hi Folded       cterm=bold,underline ctermfg=31 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
 hi DiffChange   ctermbg=none
