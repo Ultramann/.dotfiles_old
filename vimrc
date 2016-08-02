@@ -38,7 +38,7 @@ colorscheme caryColors
 autocmd FileType python,text,markdown,html setlocal tabstop=4 shiftwidth=4 softtabstop=4
 autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
-"plugin settings
+"Plugin settings
     "Buftabline 
     let g:buftabline_indicators=1
 
