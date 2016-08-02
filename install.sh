@@ -14,6 +14,9 @@ git submodule init && git submodule update
 if [ `uname` == 'Darwin' ]; then
   ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 fi
+if [ `uname` == 'Linux' ]; then
+  ln -s ${BASEDIR}/tmux.linux ~/.tmux.conf
+fi
 
 # ipython
 ln -s ${BASEDIR}/ipython/ ~/.ipython

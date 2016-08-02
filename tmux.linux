@@ -15,8 +15,8 @@ unbind s
 unbind &
 unbind "'"
 
-set -g prefix C-z
-bind-key C-z send-prefix
+set -g prefix C-a
+bind-key C-a send-prefix
 
 bind s split-window -h -c '#{pane_current_path}'
 bind v split-window -c '#{pane_current_path}'
@@ -36,7 +36,6 @@ bind J switch-client -p
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded."
 
 set -g default-terminal 'xterm-256color'
-set -g default-command 'reattach-to-user-namespace -l ${SHELL}'
 set -g base-index 1
 
 set -g status on
@@ -44,11 +43,10 @@ set -g status-interval 1
 set -g status-fg '#595959'
 set -g status-left '#[fg=#e6e6e6] [#S] #[fg=#595959]'
 set -g status-left-length 30
-set -g status-right '#[fg=#595959]Pane: #P | #[fg=#e6e6e6]%a %m/%d/%Y %I:%M:%S '
+set -g status-right '#[fg=#595959]Pane: #P | #[fg=#e6e6e6]AWS '
 set -g status-bg '#0f749f'
 set -g status-utf8 on
 
-set -g pane-border-style fg='#0f749f'
 set -g pane-active-border-fg '#e6e6e6'
 set -g pane-active-border-bg '#0f749f'
 
@@ -58,3 +56,4 @@ set -g message-fg '#ffffff'
 set -g mode-bg '#0f749f'
 set -g mode-fg '#ffffff'
 set -g mode-keys vi
+set -g status-bg '#009933'
