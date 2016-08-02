@@ -3,11 +3,11 @@ hi Statement    ctermfg=160
 hi Special      ctermfg=35
 hi PreProc      ctermfg=125
 hi Identifier   ctermfg=6
-hi Constant     ctermfg=127
-hi Comment      ctermfg=27
+hi Constant     ctermfg=27
+hi Comment      ctermfg=127
 hi ErrorMsg     ctermfg=161 ctermbg=none
 hi Error        term=reverse cterm=underline ctermfg=15 ctermbg=9
-hi Type         ctermfg=6
+hi Type         ctermfg=172
 hi MatchParen   term=reverse cterm=bold ctermfg=160 ctermbg=81
 hi Menu         ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
