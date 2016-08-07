@@ -92,6 +92,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     "Productivity
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
+    nnoremap    B       ^
+    nnoremap    E       $
     nnoremap <leader>w :w<CR>
     nnoremap <leader>W :wa<CR>
     nnoremap <leader>q :wq<CR>
@@ -102,6 +104,14 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>ct :! pdflatex -shell-escape %<CR>
     nnoremap <leader>u <C-r>
     nnoremap <leader>o :noh<CR>
+    nnoremap <leader>tw :call TrimWhitespace()<CR>
+
+    "Functions
+    fun! TrimWhitespace()
+        let l:save_cursor = getpos('.')
+        %s/\s\+$//e
+        call setpos('.', l:save_cursor)
+    endfun
 
     "Abbreviations
     ab ra ->
