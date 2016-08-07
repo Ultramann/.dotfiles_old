@@ -8,7 +8,6 @@ hi Comment      ctermfg=127
 hi ErrorMsg     ctermfg=161 ctermbg=none
 hi Error        term=reverse cterm=underline ctermfg=15 ctermbg=9
 hi Type         ctermfg=172
-hi MatchParen   term=reverse cterm=bold ctermfg=160 ctermbg=81
 hi Menu         ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
 hi Visual       term=reverse ctermfg=7 ctermbg=8
@@ -16,6 +15,9 @@ hi VertSplit    term=reverse ctermfg=75
 hi Folded       cterm=bold,underline ctermfg=31 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
 hi DiffChange   ctermbg=none
+
+hi clear MatchParen
+hi MatchParen   cterm=bold ctermfg=162
 
 hi clear WildMenu
 hi WildMenu     term=reverse ctermfg=31
