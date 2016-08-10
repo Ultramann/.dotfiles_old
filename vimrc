@@ -94,6 +94,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     vnoremap    vj    <ESC>
     nnoremap    B       ^
     nnoremap    E       $
+    nnoremap <leader>m %
     nnoremap <leader>w :w<CR>
     nnoremap <leader>W :wa<CR>
     nnoremap <leader>q :wq<CR>
