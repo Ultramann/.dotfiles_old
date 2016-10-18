@@ -18,7 +18,8 @@ set scrolloff=4
 set autoindent
 set smarttab
 set expandtab
-set nu
+set number
+set numberwidth=5
 set lbr
 set ignorecase
 set splitbelow
