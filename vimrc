@@ -93,6 +93,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     "Productivity
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
+    vnoremap    s     :sort<CR>
     nnoremap    B       ^
     nnoremap    E       $
     nnoremap <leader>m %
