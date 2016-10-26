@@ -12,6 +12,7 @@ git submodule init && git submodule update
 
 # tmux
 if [ `uname` == 'Darwin' ]; then
+  brew install tmux
   ln -s ${BASEDIR}/tmux.conf ~/.tmux.conf
 fi
 if [ `uname` == 'Linux' ]; then
