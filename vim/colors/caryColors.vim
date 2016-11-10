@@ -22,6 +22,7 @@ hi MatchParen   cterm=bold ctermfg=162
 hi clear WildMenu
 hi WildMenu     term=reverse ctermfg=31
 hi StatusLine   cterm=reverse ctermfg=31
+hi StatusLineNC cterm=reverse ctermfg=31 ctermbg=15
 
 hi clear CursorLine
 hi clear CursorLineNr
