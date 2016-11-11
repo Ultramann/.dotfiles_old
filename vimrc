@@ -103,7 +103,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>Q :wqa<CR>
     nnoremap <leader>fq :q!<CR>
     nnoremap <leader>Fq :qa!<CR>
-    nnoremap <leader>rp :! ipython %<CR>
+    nnoremap <leader>rp :! python %<CR>
+    nnoremap <leader>rh :! stack runghc %<CR>
     nnoremap <leader>ct :! pdflatex -shell-escape %<CR>
     nnoremap <leader>u <C-r>
     nnoremap <leader>o :noh<CR>
