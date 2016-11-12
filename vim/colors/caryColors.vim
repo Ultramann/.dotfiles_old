@@ -10,9 +10,9 @@ hi Error        term=reverse cterm=underline ctermfg=15 ctermbg=9
 hi Type         ctermfg=172
 hi Menu         ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
-hi Visual       cterm=reverse ctermfg=240 ctermbg=15
+hi Visual       cterm=reverse ctermfg=235 ctermbg=15
 hi VertSplit    term=reverse ctermfg=75
-hi Folded       cterm=bold,underline ctermfg=31 ctermbg=none
+hi Folded       cterm=bold,underline ctermfg=67 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
 hi DiffChange   ctermbg=none
 
