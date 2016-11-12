@@ -30,7 +30,7 @@ hi StatusLineNC cterm=reverse ctermfg=31 ctermbg=15
 hi clear CursorLine
 hi clear CursorLineNr
 hi LineNr       ctermbg=234 ctermfg=31
-hi CursorLineNr cterm=reverse ctermfg=31
+hi CursorLineNr ctermbg=236 ctermfg=123
 
 hi clear Search
 hi clear IncSearch
