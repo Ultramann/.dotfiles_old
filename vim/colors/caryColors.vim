@@ -30,7 +30,7 @@ hi StatusLineNC cterm=reverse ctermfg=31 ctermbg=15
 hi clear CursorLine
 hi clear CursorLineNr
 hi LineNr       ctermbg=234 ctermfg=31
-hi CursorLineNr ctermbg=236 ctermfg=123
+hi CursorLineNr cterm=bold ctermbg=236 ctermfg=123
 
 hi clear Search
 hi clear IncSearch
@@ -54,5 +54,5 @@ hi TabLineFill  term=reverse cterm=reverse ctermfg=31
 
 hi clear Pmenu
 hi clear PmenuSel
-hi Pmenu        cterm=reverse ctermfg=8
-hi PmenuSel     cterm=bold,reverse ctermfg=31
+hi Pmenu        ctermbg=236 ctermfg=31
+hi PmenuSel     cterm=bold ctermbg=238 ctermfg=123
