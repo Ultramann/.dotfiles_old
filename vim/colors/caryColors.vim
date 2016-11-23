@@ -47,10 +47,13 @@ hi SpellRare    cterm=underline ctermfg=225
 hi SpellLocal   cterm=underline ctermfg=14
 
 hi clear TabLine
+hi clear TabLineSel
 hi clear TabLineFill
+hi clear BufTabLineActive
 hi TabLine      cterm=reverse ctermfg=31
 hi TabLineSel   cterm=bold ctermfg=31
-hi TabLineFill  term=reverse cterm=reverse ctermfg=31
+hi TabLineFill  cterm=reverse ctermfg=31
+hi link BufTabLineActive TabLineFill
 
 hi clear Pmenu
 hi clear PmenuSel
