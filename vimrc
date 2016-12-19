@@ -52,6 +52,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     let g:syntastic_check_on_open=1
     let g:syntastic_check_on_wq=0
     let g:syntastic_python_checkers=['pyflakes']
+    let g:syntastic_haskell_checkers=['hlint']
 
 "Mappings
     "No arrow keys
