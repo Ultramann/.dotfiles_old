@@ -67,6 +67,9 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap     j     gj
     nnoremap     k     gk
 
+    "Line number style swapping
+    nnoremap <leader>ns :set relativenumber!<CR>
+
     "Spell check
     nnoremap <leader>sc :set spell spelllang=en_us<CR>
     nnoremap <leader>so :set nospell<CR>
@@ -131,7 +134,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>gp :Git push<CR>
 
     "NERDTree
-    nnoremap <leader>n :NERDTreeToggle<CR>
+    nnoremap <leader>nt :NERDTreeToggle<CR>
     let g:NERDTreeDirArrowExpandable = '▸'
     let g:NERDTreeDirArrowCollapsible = '▾'
 
