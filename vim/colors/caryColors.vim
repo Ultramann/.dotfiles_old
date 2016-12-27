@@ -23,6 +23,7 @@ hi StatusLine   cterm=reverse ctermfg=31
 hi StatusLineNC cterm=reverse ctermfg=31 ctermbg=15
 
 hi clear CursorLine
+hi CursorColumn ctermbg=236
 hi LineNr       ctermbg=234 ctermfg=31
 hi CursorLineNr cterm=bold ctermfg=123 ctermbg=236
 

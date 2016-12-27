@@ -109,16 +109,28 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>Fq :qa!<CR>
     nnoremap <leader>rp :! python %<CR>
     nnoremap <leader>rh :! stack runghc %<CR>
-    nnoremap <leader>ct :! pdflatex -shell-escape %<CR>
+    nnoremap <leader>rt :! pdflatex -shell-escape %<CR>
     nnoremap <leader>u <C-r>
     nnoremap <leader>o :noh<CR>
     nnoremap <leader>tw :call TrimWhitespace()<CR>
+    nnoremap <leader>c : call ToggleCursorLines()<CR>
 
     "Functions
     fun! TrimWhitespace()
         let l:save_cursor = getpos('.')
         %s/\s\+$//e
         call setpos('.', l:save_cursor)
+    endfun
+
+    fun! ToggleCursorLines()
+        if &cursorline && &cursorcolumn
+            hi  clear CursorLine
+            set nocursorcolumn
+        else
+            hi  CursorLine   ctermbg=236
+            set cursorline
+            set cursorcolumn
+        endif
     endfun
 
     "Abbreviations
