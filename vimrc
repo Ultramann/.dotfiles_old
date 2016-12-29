@@ -93,6 +93,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>sr- :resize -5<CR>
     nnoremap <leader>sj <C-w>j
     nnoremap <leader>sk <C-w>k
+    nnoremap <leader>sh <C-w>h
+    nnoremap <leader>sl <C-w>l
 
     "Productivity
     inoremap    jj    <ESC>
