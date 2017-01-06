@@ -7,9 +7,10 @@ hi Constant     ctermfg=27
 hi Comment      ctermfg=127
 hi Type         ctermfg=172
 
+hi clear Todo
+hi Todo         cterm=bold,underline ctermfg=14
 hi ErrorMsg     ctermfg=161 ctermbg=none
 hi Error        cterm=reverse,underline ctermfg=9 ctermbg=none
-hi Todo         cterm=bold,underline ctermfg=14 ctermbg=235
 hi Menu         ctermbg=none
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
