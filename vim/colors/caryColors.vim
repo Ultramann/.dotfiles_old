@@ -15,7 +15,7 @@ hi Menu         ctermbg=none
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
 hi Visual       cterm=reverse ctermfg=238 ctermbg=15
-hi VertSplit    cterm=reverse ctermfg=75
+hi VertSplit    cterm=reverse ctermfg=31
 hi Folded       cterm=bold,underline ctermfg=67 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
 
