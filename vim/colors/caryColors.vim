@@ -1,11 +1,12 @@
 hi NonText      ctermfg=31
 hi Statement    ctermfg=160
 hi Special      ctermfg=35
-hi PreProc      ctermfg=125
+hi PreProc      ctermfg=164
 hi Identifier   ctermfg=6
-hi Constant     ctermfg=27
-hi Comment      ctermfg=127
+hi Constant     ctermfg=33
+hi Comment      ctermfg=43
 hi Type         ctermfg=172
+hi Title        ctermfg=206
 
 hi clear Todo
 hi Todo         cterm=bold,underline ctermfg=14
