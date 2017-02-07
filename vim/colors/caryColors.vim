@@ -1,7 +1,7 @@
 hi NonText      ctermfg=31
 hi Statement    ctermfg=160
-hi Special      ctermfg=35
-hi PreProc      ctermfg=164
+hi Special      ctermfg=27
+hi PreProc      ctermfg=134
 hi Identifier   ctermfg=6
 hi Constant     ctermfg=33
 hi Comment      ctermfg=43
