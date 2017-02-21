@@ -4,7 +4,7 @@ hi Special      ctermfg=27
 hi PreProc      ctermfg=134
 hi Identifier   ctermfg=6
 hi Constant     ctermfg=33
-hi Comment      ctermfg=43
+hi Comment      ctermfg=242
 hi Type         ctermfg=172
 hi Title        ctermfg=206
 
@@ -15,7 +15,7 @@ hi Error        cterm=reverse,underline ctermfg=9 ctermbg=none
 hi Menu         ctermbg=none
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
-hi Visual       cterm=reverse ctermfg=238 ctermbg=15
+hi Visual       cterm=reverse ctermfg=236 ctermbg=15
 hi VertSplit    cterm=reverse ctermfg=31
 hi Folded       cterm=bold,underline ctermfg=67 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
@@ -39,8 +39,8 @@ hi SpellLocal   cterm=underline ctermfg=14 ctermbg=none
 
 hi DiffAdd      ctermfg=34  ctermbg=235
 hi DiffDelete   ctermfg=1   ctermbg=235
-hi DiffText     ctermfg=179 ctermbg=235
-hi DiffChange   ctermfg=39  ctermbg=235
+hi DiffText     ctermfg=227 ctermbg=235
+hi DiffChange   ctermfg=81  ctermbg=235
 
 hi TabLine      cterm=reverse ctermfg=31 ctermbg=none 
 hi TabLineSel   cterm=bold ctermfg=31 ctermbg=none
