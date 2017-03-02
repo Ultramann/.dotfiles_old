@@ -89,18 +89,13 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap    `      '
 
     "Splits
-    nnoremap <leader>sr= :resize +5<CR>
-    nnoremap <leader>sr- :resize -5<CR>
-    nnoremap <leader>sj <C-w>j
-    nnoremap <leader>sk <C-w>k
-    nnoremap <leader>sh <C-w>h
-    nnoremap <leader>sl <C-w>l
+    nnoremap <leader>s= :resize +5<CR>
+    nnoremap <leader>s- :resize -5<CR>
 
     "Productivity
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
     vnoremap <leader>s :sort<CR>
-    nnoremap <leader>m %
     nnoremap <leader>w :w<CR>
     nnoremap <leader>W :wa<CR>
     nnoremap <leader>q :wq<CR>
@@ -113,7 +108,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>u <C-r>
     nnoremap <leader>o :noh<CR>
     nnoremap <leader>tw :call TrimWhitespace()<CR>
-    nnoremap <leader>c : call ToggleCursorLines()<CR>
+    nnoremap <leader>c :call ToggleCursorLines()<CR>
 
     "Functions
     fun! TrimWhitespace()
@@ -154,6 +149,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
     vnoremap <leader>y "+y
     nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
+    nnoremap <leader>P :<C-u>exec 'normal ' . v:count1 . '"+P'<CR>
     vnoremap <leader>p "+p
     nnoremap <leader>d :<C-u>exec 'normal ' . v:count1 . '"+dd'<CR>
     vnoremap <leader>d "+d
