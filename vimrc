@@ -29,6 +29,7 @@ set hlsearch
 set incsearch
 set hidden
 set wildmenu
+set showcmd
 set backspace=indent,eol,start
 filetype plugin indent on
 filetype on
