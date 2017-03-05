@@ -80,7 +80,6 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>j :bprevious<CR>
     nnoremap <leader>h :bfirst<CR>
     nnoremap <leader>x :bdelete<CR>
-    nnoremap <leader>e :edit<Space>
 
     "Swaps
     nnoremap    v    <C-V>
@@ -96,11 +95,9 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
     vnoremap <leader>s :sort<CR>
-    nnoremap <leader>w :w<CR>
     nnoremap <leader>W :wa<CR>
-    nnoremap <leader>q :wq<CR>
+    nnoremap <leader>q :q!
     nnoremap <leader>Q :wqa<CR>
-    nnoremap <leader>fq :q!<CR>
     nnoremap <leader>Fq :qa!<CR>
     nnoremap <leader>rp :! python %<CR>
     nnoremap <leader>rh :! stack runghc %<CR>
