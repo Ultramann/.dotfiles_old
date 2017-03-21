@@ -22,6 +22,7 @@ set number
 set numberwidth=5
 set lbr
 set ignorecase
+set relativenumber
 set splitbelow
 set cursorline
 set smartcase
@@ -94,10 +95,10 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     "Productivity
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
+    nnoremap    ga    ggVG
     vnoremap <leader>s :sort<CR>
-    nnoremap <leader>W :wa<CR>
-    nnoremap <leader>q :q!
     nnoremap <leader>Q :wqa<CR>
+    nnoremap <leader>fq :q!<CR>
     nnoremap <leader>Fq :qa!<CR>
     nnoremap <leader>rp :! python %<CR>
     nnoremap <leader>rh :! stack runghc %<CR>
