@@ -19,7 +19,7 @@ set autoindent
 set smarttab
 set expandtab
 set number
-set numberwidth=5
+set numberwidth=6
 set lbr
 set ignorecase
 set relativenumber
