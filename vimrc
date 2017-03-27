@@ -140,8 +140,6 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
 
     "NERDTree
     nnoremap <leader>nt :NERDTreeToggle<CR>
-    let g:NERDTreeDirArrowExpandable = '▸'
-    let g:NERDTreeDirArrowCollapsible = '▾'
 
     "Clipboard
     nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
