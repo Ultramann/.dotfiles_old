@@ -10,35 +10,49 @@ call pathogen#helptags()
 
 let mapleader="\<Space>"
 
-"General Settings
-set nobackup
-set nowritebackup
-set noswapfile
-set scrolloff=4
-set autoindent
-set smarttab
-set expandtab
-set number
-set numberwidth=6
-set lbr
-set ignorecase
-set relativenumber
-set splitbelow
-set cursorline
-set smartcase
-set hlsearch
-set incsearch
-set hidden
-set wildmenu
-set backspace=indent,eol,start
-filetype plugin indent on
-filetype on
+"General settings
+    "Stop writing stuff 
+    set nobackup
+    set nowritebackup
+    set noswapfile
+    "Line numbers
+    set number
+    set numberwidth=6
+    set relativenumber
+    "Searching
+    set smartcase
+    set ignorecase
+    set hlsearch
+    set incsearch
+    "Indenting
+    set autoindent
+    set smarttab
+    set expandtab
+    "Bottom
+    set wildmenu
+    set scrolloff=5
+    set noruler
+    set laststatus=2
+    set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
+    "Misc
+    set linebreak
+    set splitbelow
+    set cursorline
+    set hidden
+    set spelllang=en_us
+    set backspace=indent,eol,start
+
+"Colors
 syntax on
 colorscheme caryColors
 
-"Filetype Specific Settings
-autocmd FileType python,text,markdown,html setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 softtabstop=2
+"Filetype settings
+filetype on
+filetype plugin indent on
+autocmd FileType python,text,markdown,html,vim
+    \ setlocal tabstop=4 shiftwidth=4 softtabstop=4
+autocmd FileType haskell,cabal,yaml,sh,sql,tex
+    \ setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "Plugin settings
     "Buftabline 
@@ -69,18 +83,19 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap     k     gk
 
     "Line number style swapping
-    nnoremap <leader>ns :set relativenumber!<CR>
+    nnoremap <silent> <leader>ns :set relativenumber!<CR>
 
-    "Spell check
-    nnoremap <leader>sc :set spell spelllang=en_us<CR>
-    nnoremap <leader>so :set nospell<CR>
+    "Spell checking
+    nnoremap <silent> <leader>sc :set spell!<CR>
+    nnoremap <silent> <leader>ss z=
+    nnoremap <silent> <leader>sa 1z=
 
     "Buffers
-    nnoremap <leader>k :bnext<CR>
-    nnoremap <leader>l :blast<CR>
-    nnoremap <leader>j :bprevious<CR>
-    nnoremap <leader>h :bfirst<CR>
-    nnoremap <leader>x :bdelete<CR>
+    nnoremap <silent> <leader>k :bnext<CR>
+    nnoremap <silent> <leader>l :blast<CR>
+    nnoremap <silent> <leader>j :bprevious<CR>
+    nnoremap <silent> <leader>h :bfirst<CR>
+    nnoremap <silent> <leader>x :bdelete<CR>
 
     "Swaps
     nnoremap    v    <C-V>
@@ -108,6 +123,26 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     nnoremap <leader>tw :call TrimWhitespace()<CR>
     nnoremap <leader>c :call ToggleCursorLines()<CR>
 
+    "Clipboard
+    nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
+    vnoremap <leader>y "+y
+    nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
+    nnoremap <leader>P :<C-u>exec 'normal ' . v:count1 . '"+P'<CR>
+    vnoremap <leader>p "+p
+    nnoremap <leader>d :<C-u>exec 'normal ' . v:count1 . '"+dd'<CR>
+    vnoremap <leader>d "+d
+
+    "Fugitive
+    nnoremap <leader>gs :Gstatus<CR>
+    nnoremap <leader>gc :Gcommit<CR>
+    nnoremap <leader>ga :Gwrite<CR>
+    nnoremap <leader>gb :Gblame<CR>
+    nnoremap <leader>gd :Gdiff<CR>
+    nnoremap <leader>gp :Git push<CR>
+
+    "NERDTree
+    nnoremap <leader>nt :NERDTreeToggle<CR>
+
     "Functions
     fun! TrimWhitespace()
         let l:save_cursor = getpos('.')
@@ -129,28 +164,3 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex setlocal tabstop=2 shiftwidth=2 s
     "Abbreviations
     ab ra ->
     ab la <-
-
-    "Fugitive
-    nnoremap <leader>gs :Gstatus<CR>
-    nnoremap <leader>gc :Gcommit<CR>
-    nnoremap <leader>ga :Gwrite<CR>
-    nnoremap <leader>gb :Gblame<CR>
-    nnoremap <leader>gd :Gdiff<CR>
-    nnoremap <leader>gp :Git push<CR>
-
-    "NERDTree
-    nnoremap <leader>nt :NERDTreeToggle<CR>
-
-    "Clipboard
-    nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
-    vnoremap <leader>y "+y
-    nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
-    nnoremap <leader>P :<C-u>exec 'normal ' . v:count1 . '"+P'<CR>
-    vnoremap <leader>p "+p
-    nnoremap <leader>d :<C-u>exec 'normal ' . v:count1 . '"+dd'<CR>
-    vnoremap <leader>d "+d
-
-"Bottom bar settings
-set noruler
-set laststatus=2
-set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
