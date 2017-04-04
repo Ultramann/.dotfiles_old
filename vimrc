@@ -49,9 +49,9 @@ colorscheme caryColors
 "Filetype settings
 filetype on
 filetype plugin indent on
-autocmd FileType python,text,markdown,html,vim
+autocmd FileType python,text,html,vim
     \ setlocal tabstop=4 shiftwidth=4 softtabstop=4
-autocmd FileType haskell,cabal,yaml,sh,sql,tex
+autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     \ setlocal tabstop=2 shiftwidth=2 softtabstop=2
 
 "Plugin settings
