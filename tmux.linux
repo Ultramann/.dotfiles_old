@@ -1,44 +1,41 @@
-unbind C-b
-unbind C-a
-unbind %
-unbind ,
-unbind .
-unbind space
-unbind n
-unbind p
-unbind '"'
-unbind [
-unbind {
-unbind }
-unbind l
-unbind s
-unbind &
-unbind v
-unbind V
-unbind z
-unbind f
-unbind "'"
+set -g prefix C-z
+bind-key C-z send-prefix
 
-set -g prefix C-a
-bind-key C-a send-prefix
+set -g repeat-time 500
 
-bind s split-window -h -c '#{pane_current_path}'
-bind v split-window -c '#{pane_current_path}'
-bind V split-window -c '#{pane_current_path}' \; resize-p -D 18
-bind l choose-tree
+#Convenience
+bind n choose-tree
 bind c copy-mode
 bind q confirm-before -p "Kill #S (y/n)?" "run-shell 'tmux switch-client -n \\\; kill-session -t \"\$(tmux display-message -p \"#S\")\"'"
 bind Q confirm-before kill-server
 bind r command-prompt 'rename-session %%'
 bind n command-prompt 'new -s %%'
 bind a command-prompt 'attach -t %%'
-bind j select-pane -L
-bind k select-pane -R \; select-pane -U
-bind u select-pane -U
-bind w swap-pane -U
-bind K resize-pane -U 6
-bind J resize-pane -D 6
-bind f resize-pane -Z
+
+#Split panes
+bind s split-window -h -c '#{pane_current_path}'
+bind v split-window -c '#{pane_current_path}'
+bind V split-window -f \; resize-p -D 12
+bind m split-window -c '#{pane_current_path}' \; resize-p -D 18
+
+#Navigate panes
+bind -r h select-pane -L
+bind -r k select-pane -U
+bind -r j select-pane -D
+bind -r l select-pane -R
+bind -r \; last-pane
+
+#Resize panes
+bind -r < resize-pane -L 1
+bind -r > resize-pane -R 1
+bind -r - resize-pane -D 1
+bind -r = resize-pane -U 1
+
+#Whack panes
+bind w swap-pane -L
+bind e swap-pane -L
+bind F resize-pane -Z
+
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded."
 
 set -g default-terminal 'xterm-256color'
@@ -49,10 +46,10 @@ set -g status-interval 1
 set -g status-fg '#595959'
 set -g status-left '#[fg=#e6e6e6] [#S] #[fg=#595959]'
 set -g status-left-length 30
-set -g status-right '#[fg=#595959]Pane: #P | #[fg=#e6e6e6]AWS '
+set -g status-right '#[fg=#595959]Pane: #P | #[fg=#e6e6e6]%a %m/%d/%Y %I:%M:%S '
 set -g status-bg '#0f749f'
-set -g status-utf8 on
 
+set -g pane-border-style fg='#0f749f'
 set -g pane-active-border-fg '#e6e6e6'
 set -g pane-active-border-bg '#0f749f'
 
@@ -62,4 +59,3 @@ set -g message-fg '#ffffff'
 set -g mode-bg '#0f749f'
 set -g mode-fg '#ffffff'
 set -g mode-keys vi
-set -g status-bg '#009933'
