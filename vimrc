@@ -107,6 +107,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
     nnoremap    ga    ggVG
+    vnoremap    //    y/<C-R>"<CR>
     vnoremap <leader>s :sort<CR>
     nnoremap <leader>Q :wqa<CR>
     nnoremap <leader>fq :q!<CR>
