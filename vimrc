@@ -108,37 +108,36 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     vnoremap    vj    <ESC>
     nnoremap    ga    ggVG
     vnoremap    //    y/<C-R>"<CR>
-    vnoremap <leader>s :sort<CR>
     nnoremap <leader>Q :wqa<CR>
     nnoremap <leader>fq :q!<CR>
     nnoremap <leader>Fq :qa!<CR>
-    nnoremap <leader>rp :! python %<CR>
-    nnoremap <leader>rh :! stack runghc %<CR>
-    nnoremap <leader>rt :! pdflatex -shell-escape %<CR>
     nnoremap <leader>u <C-r>
-    nnoremap <leader>o :noh<CR>
-    nnoremap <leader>tw :call TrimWhitespace()<CR>
-    nnoremap <leader>c :call ToggleCursorLines()<CR>
+    nnoremap <silent> <leader>rp :! python %<CR>
+    nnoremap <silent> <leader>rh :! stack runghc %<CR>
+    nnoremap <silent> <leader>rt :! pdflatex -shell-escape %<CR>
+    nnoremap <silent> <leader>o :noh<CR>
+    nnoremap <silent> <leader>tw :call TrimWhitespace()<CR>
+    nnoremap <silent> <leader>c :call ToggleCursorLines()<CR>
 
     "Clipboard
-    nnoremap <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
-    vnoremap <leader>y "+y
-    nnoremap <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
-    nnoremap <leader>P :<C-u>exec 'normal ' . v:count1 . '"+P'<CR>
-    vnoremap <leader>p "+p
-    nnoremap <leader>d :<C-u>exec 'normal ' . v:count1 . '"+dd'<CR>
-    vnoremap <leader>d "+d
+    nnoremap <silent> <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
+    vnoremap <silent> <leader>y "+y
+    nnoremap <silent> <leader>p :<C-u>exec 'normal ' . v:count1 . '"+p'<CR>
+    nnoremap <silent> <leader>P :<C-u>exec 'normal ' . v:count1 . '"+P'<CR>
+    vnoremap <silent> <leader>p "+p
+    nnoremap <silent> <leader>d :<C-u>exec 'normal ' . v:count1 . '"+dd'<CR>
+    vnoremap <silent> <leader>d "+d
 
     "Fugitive
-    nnoremap <leader>gs :Gstatus<CR>
-    nnoremap <leader>gc :Gcommit<CR>
-    nnoremap <leader>ga :Gwrite<CR>
-    nnoremap <leader>gb :Gblame<CR>
-    nnoremap <leader>gd :Gdiff<CR>
-    nnoremap <leader>gp :Git push<CR>
+    nnoremap <silent> <leader>gs :Gstatus<CR>
+    nnoremap <silent> <leader>gc :Gcommit<CR>
+    nnoremap <silent> <leader>ga :Gwrite<CR>
+    nnoremap <silent> <leader>gb :Gblame<CR>
+    nnoremap <silent> <leader>gd :Gdiff<CR>
+    nnoremap <silent> <leader>gp :Git push<CR>
 
     "NERDTree
-    nnoremap <leader>nt :NERDTreeToggle<CR>
+    nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
 
     "Functions
     fun! TrimWhitespace()
