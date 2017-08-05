@@ -14,7 +14,7 @@ hi ErrorMsg     ctermfg=161 ctermbg=none
 hi Error        cterm=reverse,underline ctermfg=9 ctermbg=none
 hi Menu         ctermbg=none
 hi MoreMsg      ctermfg=42
-hi Question     cterm=bold ctermfg=42
+hi Question     ctermfg=42
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
 hi Visual       cterm=reverse ctermfg=236 ctermbg=15
