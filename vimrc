@@ -22,6 +22,7 @@ let mapleader="\<Space>"
     "Searching
     set smartcase
     set ignorecase
+    set gdefault
     set hlsearch
     set incsearch
     "Indenting
@@ -63,6 +64,10 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     let g:syntastic_check_on_wq=0
     let g:syntastic_python_checkers=['pyflakes']
     let g:syntastic_haskell_checkers=['hlint']
+
+    "Netrw
+    let g:netrw_banner=0
+    let g:netrw_liststyle=3
 
 "Mappings
     "No arrow keys
@@ -111,6 +116,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <leader>fq :q!<CR>
     nnoremap <leader>Fq :qa!<CR>
     nnoremap <leader>u <C-r>
+    nnoremap <leader>v V`]
     nnoremap <silent> <leader>rp :! python %<CR>
     nnoremap <silent> <leader>rh :! stack runghc %<CR>
     nnoremap <silent> <leader>rt :! pdflatex -shell-escape %<CR>
