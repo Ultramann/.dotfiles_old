@@ -41,13 +41,14 @@ let mapleader="\<Space>"
     set splitbelow
     set cursorline
     set hidden
+    set visualbell
     set nocompatible
     set spelllang=en_us
     set backspace=indent,eol,start
 
 "Colors
 syntax enable
-colorscheme caryColors
+colorscheme bossColors
 
 "Filetype settings
 filetype on
