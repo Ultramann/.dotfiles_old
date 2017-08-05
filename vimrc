@@ -35,15 +35,17 @@ let mapleader="\<Space>"
     set laststatus=2
     set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
     "Misc
+    set path+=**
     set linebreak
     set splitbelow
     set cursorline
     set hidden
+    set nocompatible
     set spelllang=en_us
     set backspace=indent,eol,start
 
 "Colors
-syntax on
+syntax enable
 colorscheme caryColors
 
 "Filetype settings
