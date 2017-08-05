@@ -11,7 +11,7 @@ call pathogen#helptags()
 let mapleader="\<Space>"
 
 "General settings
-    "Stop writing stuff 
+    "Stop writing stuff
     set nobackup
     set nowritebackup
     set noswapfile
@@ -70,17 +70,20 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     let g:netrw_liststyle=3
 
 "Mappings
-    "No arrow keys
-    nnoremap   <up>   <nop>
-    nnoremap  <down>  <nop>
-    nnoremap  <left>  <nop>
-    nnoremap  <right> <nop>
-    inoremap   <up>   <nop>
-    inoremap  <down>  <nop>
-    inoremap  <left>  <nop>
-    inoremap  <right> <nop>
-    nnoremap     j     gj
-    nnoremap     k     gk
+    "Productivity
+    inoremap    jj    <ESC>
+    vnoremap    vj    <ESC>
+    nnoremap    ga    ggVG
+    vnoremap    //    y/<C-R>"<CR>
+    nnoremap <leader>Q :q!<CR>
+    nnoremap <leader>f :find 
+    nnoremap <leader>e :edit 
+    nnoremap <leader>u <C-r>
+    nnoremap <leader>v V`]
+    nnoremap <silent> <leader>b :vsp .<CR>:vertical resize 35<CR>
+    nnoremap <silent> <leader>o :noh<CR>
+    nnoremap <silent> <leader>tw :call TrimWhitespace()<CR>
+    nnoremap <silent> <leader>c :call ToggleCursorLines()<CR>
 
     "Line number style swapping
     nnoremap <silent> <leader>ns :set relativenumber!<CR>
@@ -107,22 +110,10 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <leader>s= :resize +5<CR>
     nnoremap <leader>s- :resize -5<CR>
 
-    "Productivity
-    inoremap    jj    <ESC>
-    vnoremap    vj    <ESC>
-    nnoremap    ga    ggVG
-    vnoremap    //    y/<C-R>"<CR>
-    nnoremap <leader>Q :wqa<CR>
-    nnoremap <leader>fq :q!<CR>
-    nnoremap <leader>Fq :qa!<CR>
-    nnoremap <leader>u <C-r>
-    nnoremap <leader>v V`]
+    "Runners
     nnoremap <silent> <leader>rp :! python %<CR>
     nnoremap <silent> <leader>rh :! stack runghc %<CR>
     nnoremap <silent> <leader>rt :! pdflatex -shell-escape %<CR>
-    nnoremap <silent> <leader>o :noh<CR>
-    nnoremap <silent> <leader>tw :call TrimWhitespace()<CR>
-    nnoremap <silent> <leader>c :call ToggleCursorLines()<CR>
 
     "Clipboard
     nnoremap <silent> <leader>y :<C-u>exec 'normal ' . v:count1 . '"+yy'<CR>
@@ -141,17 +132,38 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <silent> <leader>gd :Gdiff<CR>
     nnoremap <silent> <leader>gp :Git push<CR>
 
-    "NERDTree
-    nnoremap <silent> <leader>nt :NERDTreeToggle<CR>
+    "No arrow keys
+    nnoremap   <up>   <nop>
+    nnoremap  <down>  <nop>
+    nnoremap  <left>  <nop>
+    nnoremap  <right> <nop>
+    inoremap   <up>   <nop>
+    inoremap  <down>  <nop>
+    inoremap  <left>  <nop>
+    inoremap  <right> <nop>
+    nnoremap     j     gj
+    nnoremap     k     gk
+
+"Other
+    "Commands
+    command -nargs=1 Vsb call VerticalSplitBuffer(<f-args>)
+
+    "Abbreviations
+    iabbrev ra ->
+    iabbrev la <-
 
     "Functions
-    fun! TrimWhitespace()
+    function! VerticalSplitBuffer(buffer)
+        execute 'vert sb' a:buffer 
+    endfunction
+
+    function! TrimWhitespace()
         let l:save_cursor = getpos('.')
         %s/\s\+$//e
         call setpos('.', l:save_cursor)
-    endfun
+    endfunction
 
-    fun! ToggleCursorLines()
+    function! ToggleCursorLines()
         if &cursorline && &cursorcolumn
             hi  clear CursorLine
             set nocursorcolumn
@@ -160,8 +172,4 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
             set cursorline
             set cursorcolumn
         endif
-    endfun
-
-    "Abbreviations
-    ab ra ->
-    ab la <-
+    endfunction
