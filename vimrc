@@ -35,8 +35,10 @@ let mapleader="\<Space>"
     set noruler
     set laststatus=2
     set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
+    "Finding
+    set path=**
+    set wildignore+=.git
     "Misc
-    set path+=**
     set linebreak
     set splitbelow
     set cursorline
