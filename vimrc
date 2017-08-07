@@ -81,7 +81,7 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <leader>e :edit 
     nnoremap <leader>u <C-r>
     nnoremap <leader>v V`]
-    nnoremap <silent> <leader>b :vsp .<CR>:vertical resize 35<CR>
+    nnoremap <silent> <leader>b :Explore<CR>
     nnoremap <silent> <leader>o :noh<CR>
     nnoremap <silent> <leader>tw :call TrimWhitespace()<CR>
     nnoremap <silent> <leader>c :call ToggleCursorLines()<CR>
