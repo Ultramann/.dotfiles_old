@@ -83,13 +83,12 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <leader>e :edit 
     nnoremap <leader>u <C-r>
     nnoremap <leader>v V`]
-    nnoremap <silent> <leader>b :Explore<CR>
+    nnoremap <leader>b :ls<CR>:b<Space>
+    nnoremap <silent> <leader>t :Explore<CR>
     nnoremap <silent> <leader>o :noh<CR>
-    nnoremap <silent> <leader>tw :call TrimWhitespace()<CR>
+    nnoremap <silent> <leader>w :call TrimWhitespace()<CR>
     nnoremap <silent> <leader>c :call ToggleCursorLines()<CR>
-
-    "Line number style swapping
-    nnoremap <silent> <leader>ns :set relativenumber!<CR>
+    nnoremap <silent> <leader>n :set relativenumber!<CR>
 
     "Spell checking
     nnoremap <silent> <leader>sc :set spell!<CR>
@@ -110,8 +109,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap    `      '
 
     "Splits
-    nnoremap <leader>s= :resize +5<CR>
-    nnoremap <leader>s- :resize -5<CR>
+    nnoremap <silent> <leader>s= :resize +5<CR>
+    nnoremap <silent> <leader>s- :resize -5<CR>
 
     "Runners
     nnoremap <silent> <leader>rp :! python %<CR>
