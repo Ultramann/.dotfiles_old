@@ -74,6 +74,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
 
 "Mappings
     "Productivity
+    nnoremap     j     gj
+    nnoremap     k     gk
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
     nnoremap    ga    ggVG
@@ -143,8 +145,6 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     inoremap  <down>  <nop>
     inoremap  <left>  <nop>
     inoremap  <right> <nop>
-    nnoremap     j     gj
-    nnoremap     k     gk
 
 "Other
     "Commands
