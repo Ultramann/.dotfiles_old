@@ -29,16 +29,17 @@ let mapleader="\<Space>"
     set autoindent
     set smarttab
     set expandtab
-    "Bottom
+    "Wildmenu
     set wildmenu
-    set scrolloff=5
+    set wildignore+=.git
+    set wildmode=longest:list,full
+    "Bottom
     set noruler
+    set scrolloff=5
     set laststatus=2
     set statusline=%<\ %f\ %m%y%=%-35.(Line:\ %l\ of\ %L,\ Col:\ %c%V\ (%P)%)
-    "Finding
-    set path=**
-    set wildignore+=.git
     "Misc
+    set path=**
     set linebreak
     set splitbelow
     set cursorline
@@ -79,13 +80,13 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     inoremap    jj    <ESC>
     vnoremap    vj    <ESC>
     nnoremap    ga    ggVG
+    nnoremap    gl   :find <C-R><C-W>
     vnoremap    //    y/<C-R>"<CR>
     nnoremap <leader>Q :q!<CR>
-    nnoremap <leader>f :find 
-    nnoremap <leader>e :edit 
-    nnoremap <leader>u <C-r>
+    nnoremap <leader>f :find<Space>
+    nnoremap <leader>e :edit<Space>
+    nnoremap <leader>u <C-R>
     nnoremap <leader>v V`]
-    nnoremap <leader>b :ls<CR>:b<Space>
     nnoremap <silent> <leader>t :Explore<CR>
     nnoremap <silent> <leader>o :noh<CR>
     nnoremap <silent> <leader>w :call TrimWhitespace()<CR>
@@ -98,10 +99,9 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <silent> <leader>sa 1z=
 
     "Buffers
-    nnoremap <silent> <leader>k :bnext<CR>
-    nnoremap <silent> <leader>l :blast<CR>
-    nnoremap <silent> <leader>j :bprevious<CR>
-    nnoremap <silent> <leader>h :bfirst<CR>
+    nnoremap   <Tab>  :bnext<CR>
+    nnoremap  <S-Tab> :bprevious<CR>
+    nnoremap <leader>b :ls<CR>:b<Space>
     nnoremap <silent> <leader>x :bdelete<CR>
 
     "Swaps
