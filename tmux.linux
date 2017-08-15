@@ -5,8 +5,8 @@ set -g repeat-time 500
 set -g mode-keys vi
 
 #Convenience
-bind l choose-tree
-bind k copy-mode
+bind ; choose-tree
+bind K copy-mode
 bind q confirm-before -p "Kill #S (y/n)?" "run-shell 'tmux switch-client -n \\\; kill-session -t \"\$(tmux display-message -p \"#S\")\"'"
 bind Q confirm-before kill-server
 bind r command-prompt 'rename-session %%'
@@ -14,17 +14,17 @@ bind n command-prompt 'new -s %%'
 bind a command-prompt 'attach -t %%'
 
 #Split panes
-bind s split-window -h -c '#{pane_current_path}'
+bind s split-window -h -f '#{pane_current_path}'
 bind v split-window -c '#{pane_current_path}'
 bind V split-window -f \; resize-p -D 12
 bind m split-window -c '#{pane_current_path}' \; resize-p -D 18
 
 #Navigate panes
-bind -r H select-pane -L
-bind -r J select-pane -D
-bind -r K select-pane -U
-bind -r L select-pane -R
-bind -r j last-pane
+bind -r h select-pane -L
+bind -r j select-pane -D
+bind -r k select-pane -U
+bind -r l select-pane -R
+bind -r Enter last-pane
 
 #Resize panes
 bind -r < resize-pane -L 1
