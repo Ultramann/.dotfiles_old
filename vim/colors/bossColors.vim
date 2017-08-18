@@ -17,7 +17,7 @@ hi MoreMsg      ctermfg=42
 hi Question     ctermfg=42
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
-hi Visual       cterm=reverse ctermfg=236 ctermbg=15
+hi Visual       cterm=reverse ctermfg=235 ctermbg=15
 hi VertSplit    cterm=reverse ctermfg=31
 hi Folded       cterm=bold,underline ctermfg=67 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
@@ -47,7 +47,6 @@ hi DiffChange   ctermfg=81  ctermbg=235
 hi TabLine      cterm=reverse ctermfg=31 ctermbg=none 
 hi TabLineSel   cterm=bold ctermfg=31 ctermbg=none
 hi TabLineFill  cterm=reverse ctermfg=31 ctermbg=none
-hi link BufTabLineActive TabLineFill
 
 hi Pmenu        cterm=none ctermbg=236 ctermfg=31
 hi PmenuSel     cterm=bold ctermbg=238 ctermfg=123
