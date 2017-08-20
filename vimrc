@@ -102,8 +102,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
 
     "Buffers
     nnoremap   <Tab>  :bnext<CR>
-    nnoremap  <S-Tab> :bprevious<CR>
-    nnoremap <leader>b :ls<CR>:b<Space>
+    nnoremap <S-Tab>  :bprevious<CR>
+    nnoremap <leader>b :ls<CR>:buffer<Space>
     nnoremap <silent> <leader>x :bdelete<CR>
 
     "Swaps
