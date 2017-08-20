@@ -85,6 +85,8 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
     nnoremap <leader>Q :q!<CR>
     nnoremap <leader>f :find<Space>
     nnoremap <leader>e :edit<Space>
+    vnoremap <leader>a :norm<Space>A
+    nnoremap <leader>a :%norm<Space>A
     nnoremap <leader>u <C-R>
     nnoremap <leader>v V`]
     nnoremap <silent> <leader>t :Explore<CR>
@@ -149,10 +151,6 @@ autocmd FileType haskell,cabal,yaml,sh,sql,tex,markdown
 "Other
     "Commands
     command -nargs=1 Vsb call VerticalSplitBuffer(<f-args>)
-
-    "Abbreviations
-    iabbrev ra ->
-    iabbrev la <-
 
     "Functions
     function! VerticalSplitBuffer(buffer)
