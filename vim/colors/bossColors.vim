@@ -17,7 +17,7 @@ hi MoreMsg      ctermfg=42
 hi Question     ctermfg=42
 hi MatchParen   cterm=bold ctermfg=162 ctermbg=none
 hi SignColumn   cterm=none ctermfg=31 ctermbg=195
-hi Visual       cterm=reverse ctermfg=245 ctermbg=16
+hi Visual       cterm=reverse ctermfg=240 ctermbg=15
 hi VertSplit    cterm=reverse ctermfg=31
 hi Folded       cterm=bold,underline ctermfg=67 ctermbg=none
 hi FoldColumn   ctermfg=31 ctermbg=none
