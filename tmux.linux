@@ -1,45 +1,45 @@
-set -g prefix C-z
-bind-key C-z send-prefix
+# Base
+set -g prefix C-a
+bind-key C-a send-prefix
 
 set -g repeat-time 500
 set -g mode-keys vi
 
-#Convenience
+# Convenience
 bind \; choose-tree
-bind K copy-mode
 bind q confirm-before -p "Kill #S (y/n)?" "run-shell 'tmux switch-client -n \\\; kill-session -t \"\$(tmux display-message -p \"#S\")\"'"
 bind Q confirm-before kill-server
 bind r command-prompt 'rename-session %%'
 bind n command-prompt 'new -s %%'
 bind a command-prompt 'attach -t %%'
 
-#Split panes
+# Split panes
 bind s split-window -h -f '#{pane_current_path}'
 bind v split-window -c '#{pane_current_path}'
 bind V split-window -f \; resize-p -D 12
 bind m split-window -c '#{pane_current_path}' \; resize-p -D 18
 
-#Navigate panes
+# Navigate panes
 bind -r h select-pane -L
 bind -r j select-pane -D
 bind -r k select-pane -U
 bind -r l select-pane -R
 bind -r Enter last-pane
 
-#Resize panes
+# Resize panes
 bind -r < resize-pane -L 1
 bind -r > resize-pane -R 1
 bind -r _ resize-pane -D 1
 bind -r + resize-pane -U 1
 
-#Whack panes
+# Whack panes
 bind w swap-pane -L
 bind e swap-pane -R
 bind f resize-pane -Z
 
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded."
 
-#Aesthetics
+# Aesthetics
 set -g default-terminal 'xterm-256color'
 set -g base-index 1
 
@@ -52,6 +52,7 @@ set -g status-right '#[fg=#e6e6e6]AWS '
 set -g status-bg '#009933'
 set -g status-utf8 on
 
+set -g pane-border-style fg='#0f749f'
 set -g pane-active-border-fg '#e6e6e6'
 set -g pane-active-border-bg '#0f749f'
 
@@ -60,3 +61,6 @@ set -g message-fg '#ffffff'
 
 set -g mode-bg '#0f749f'
 set -g mode-fg '#ffffff'
+
+# Unbinds
+unbind Tab
