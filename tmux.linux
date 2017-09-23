@@ -14,9 +14,8 @@ bind n command-prompt 'new -s %%'
 bind a command-prompt 'attach -t %%'
 
 # Split panes
-bind s split-window -h -f '#{pane_current_path}'
+bind s split-window -h -c '#{pane_current_path}'
 bind v split-window -c '#{pane_current_path}'
-bind V split-window -f \; resize-p -D 12
 bind m split-window -c '#{pane_current_path}' \; resize-p -D 18
 
 # Navigate panes
@@ -33,10 +32,9 @@ bind -r _ resize-pane -D 1
 bind -r + resize-pane -U 1
 
 # Whack panes
-bind w swap-pane -L
-bind e swap-pane -R
 bind f resize-pane -Z
 
+# Reload
 bind R source-file ~/.tmux.conf \; display-message "Config reloaded."
 
 # Aesthetics
@@ -52,9 +50,9 @@ set -g status-right '#[fg=#e6e6e6]AWS '
 set -g status-bg '#009933'
 set -g status-utf8 on
 
-set -g pane-border-style fg='#0f749f'
-set -g pane-active-border-fg '#e6e6e6'
-set -g pane-active-border-bg '#0f749f'
+set -g pane-border-style fg='#009933'
+set -g pane-active-border-fg '#009933'
+set -g pane-active-border-bg '#009933'
 
 set -g message-bg '#b30000'
 set -g message-fg '#ffffff'
